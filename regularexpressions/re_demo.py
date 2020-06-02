@@ -31,7 +31,7 @@ $ at end
 [a - b] range 
 [^a-b] everything but a-b
 (matching regex)
-(a|b) two regex
+(a|b) two regexo
 '''
 
 '''
