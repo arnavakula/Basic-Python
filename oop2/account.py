@@ -2,6 +2,15 @@
 account is the object
 attributes: init balance, 
 instance vars: filepath, balance
+hierarchy:
+    Class
+    (Sub) class
+    Data member
+        Class var independent to all objects
+        Instance var of self independent to object
+    Doc string (class description """""") accesed with .__doc__
+    Constructor
+Methods
 '''
 class Account:
 
@@ -26,6 +35,9 @@ class Account:
             f.write(str(self.balance))
 
 class CheckingAccount(Account):
+    """This class handles checking accounts""" #doc string
+
+    type = 'checking' #class var
     
     def __init__(self, filepath):
         super().__init__(filepath) #no self needed
@@ -43,3 +55,4 @@ print(acc1.balance)
 cacc1 = CheckingAccount('balance.txt')
 cacc1.deposit(100)
 print(cacc1.balance)
+print(cacc1.__doc__)
